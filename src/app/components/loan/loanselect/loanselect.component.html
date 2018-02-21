@@ -1,0 +1,53 @@
+<section class="hero ">
+  <a href="https://www.thomsonreuters.com/en.html">
+    <div class="hero-body thomson is-fullheight">
+      <div class="container has-text-centered">
+        <div class="column is-6 is-offset-3">
+          <img src="../../../../../assets/logo.png">
+          <h2 class="subtitle">
+          </h2>
+        </div>
+      </div>
+    </div>
+  </a>
+</section>
+<br>
+<br>
+<div class="container is-fullwidth">
+  <div class="dropdown is-hoverable is-fullwidth">
+    <div class="dropdown is-fullwidth">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>loan Select</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <a routerLink="carloan">
+            <p>
+              Car Loan
+           </p>
+          </a>
+        </div>
+        <div class="dropdown-item">
+          <a routerLink="emergency">
+            <p>
+              Parental Medical Care Loan</p>
+          </a>
+        </div>
+        <div class="dropdown-item">
+          <a routerLink="parentalmedical">
+            <p>
+                Emergency Loan
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<router-outlet></router-outlet>

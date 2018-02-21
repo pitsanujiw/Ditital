@@ -1,0 +1,26 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+<div class="container">
+    <div class="field">
+      <div class="field-label is-small">
+      </div>
+     <div class="field-body">
+       <div class="field -left">
+         Employee ID : <input class="form-control" type="text" name="" id="" required name = "EmpID" formControlName="employeeID"/> 
+       </div>
+       <div class="field-right">
+          <p class="control">
+              Number of copy : <input class="form-control" type="number" name="" id="" value="0" min="0" max="10" formControlName="numberOfCopy" > 
+          </p>
+        </div>
+     </div>
+    </div>
+    </div>
+<br>
+<div class="container">
+    <strong>Note :</strong>
+    <textarea class="textarea" placeholder="ETC ..." type="textarea" formControlName="note" ></textarea>
+    <br>
+    <button class="btn btn-default" type="submit" onclick="window.location.reload()">Submit</button>
+  </div> 
+  <br>
+ </form>

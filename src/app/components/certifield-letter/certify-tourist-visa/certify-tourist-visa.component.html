@@ -1,0 +1,67 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()" enctype="multipart/form-data">
+  <div class="container">
+    <div class="field">
+      <div class="field-label is-small">
+      </div>
+      <div class="field-body">
+        <div class="field -left">
+          Employee ID :
+          <input formControlName="employeeID" type="text" required="required">
+        </div>
+        <div class="field-right">
+          <p class="control">
+            Number of copy :
+            <input type="number" formControlName="numberOfCopy" value="0" min="0" max="10" required="required">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <div class="control">
+      Full name as it appears in your passport :
+      <input class="" type="text" formControlName="firstNamePassport" placeholder="Full name" required="required">
+    </div>
+    <br>
+    <div class="control">
+      Passport Number
+      <input class="" type="text" placeholder="Passport number" formControlName="passportNumber" required="required"> Passport Expiry Date :
+      <input type="date" name="from" required="required" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" formControlName="passportExpiryDate">
+      <br>
+    </div>
+    <br> Please upload a photo of your passport (1st page) :
+    <input class="files" type="file" name="files" accept="image/*" required="required" (change)="onFileChange($event)">
+
+    <br>
+    <div class="control">
+      <div>
+        Embassy for Visa Application :
+        <select formControlName="embassyForVisaApplication">
+          <option>Embassy for Visa Application </option>
+          <option>Embassy for Visa Application 2 </option>
+        </select>
+        Country of Visit :
+        <select formControlName="countryOfVisit">
+          <option>Thailand</option>
+          <option>USA</option>
+          <option>England</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="control">
+      Period of visit : From :
+      <input type="date" name="from" required="required" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" formControlName="from"> to :
+      <input type="date" name="to" required="required" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" formControlName="to">
+    </div>
+    <br>
+    <div class="container">
+      <strong>Note :</strong>
+      <textarea class="textarea" placeholder="ETC ..." formControlName="note"></textarea>
+    </div>
+    <br>
+    <button type="submit" onclick="window.location.reload()">Submit</button>
+  </div>
+</form>

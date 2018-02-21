@@ -1,0 +1,53 @@
+<br>
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+<div class="container"><p>EMPLOYEE ID </p><input class="form-control" type="text" name="" id="" required="required" formControlName="employeeID"/></div>
+<br>
+<div class="container">
+ <table class="table">
+   <thead>
+     <tr><th>
+       Bank
+     </th>
+  <th>
+    Number of Copy
+  </th></tr>
+   </thead>
+   
+     <tr>
+       <td>
+          Bangkok Bank Public Company Limited (BBL)
+       </td>
+       <td><input type="number" name="" id="" min="0" value="0" max="10"  formControlName="BBL"/></td> 
+     </tr>
+  <tr>
+      <td>
+          Land & House Bank (LH Bank)
+       </td>
+       <td><input type="number" name="" id="" min="0" value="0" max="10" formControlName="GHB" /></td>
+  </tr>
+  <tr>
+    <td>
+      Government Housing Bank (GHB)
+    </td>
+    <td><input type="number" min="0" name="" id="" value="0" max="10" formControlName="LHBank"/></td>
+  </tr>
+  <tr>
+      <td>
+          United Overseas Bank (Thai) Public Company Limited (UOB)
+       </td>
+       <td><input type="number" name="" id="" value="0" min="0" max="10" formControlName="UOB"  /></td>
+  </tr>
+ </table>
+ <br>
+ <div class="container">
+    *Note: This letter is for requesting housing loan under Thomson Reuters housing loan agreement with contracted banks. 
+ </div>
+ <br>
+ <div class="container">
+    <strong>Note :</strong>
+    <textarea class="textarea" placeholder="ETC ..." formControlName="note" ></textarea>
+    <br>
+    <button type="submit" onclick="window.location.reload()" >Submit</button>
+  </div> 
+</div>
+</form>

@@ -1,0 +1,68 @@
+<section class="hero ">
+  <a href="https://www.thomsonreuters.com/en.html">
+    <div class="hero-body thomson is-fullheight">
+      <div class="container has-text-centered">
+        <div class="column is-6 is-offset-3">
+          <img src="../../../../assets/logo.png">
+          <h2 class="subtitle">
+          </h2>
+        </div>
+      </div>
+    </div>
+  </a>
+</section>
+<br>
+<br>
+<div class="container is-fullwidth">
+  <div class="dropdown is-hoverable is-fullwidth">
+    <div class="dropdown is-fullwidth">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Please Select Certifield Letter</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <a routerLink="employeecertify">
+            <p>
+              <strong> Employee Certify Letter</strong>
+              <br>(Letter certify current employment, business title, joining date and salary) </p>
+          </a>
+        </div>
+        <div class="dropdown-item">
+          <a routerLink="certifyhousing">
+            <p>
+              <strong> Certify Letter for Housing Loan</strong>
+              <br>(Letter certify current employment, business title, joining date and salary) </p>
+          </a>
+        </div>
+        <div class="dropdown-item">
+          <a routerLink="certifyfurther">
+            <p>
+              <strong> Certify Letter for further Education</strong>
+              <br>(Letter certify current employment, business title, joining date and salary) </p>
+          </a>
+        </div>
+        <div class="dropdown-item">
+          <a routerLink="certifytour">
+            <p>
+              <strong>Certify Letter for Tourist Visa Application</strong>
+              <br>(Letter certify current employment, business title, joining date and salary) </p>
+          </a>
+        </div>
+        <div class="dropdown-item">
+          <a routerLink="certifyvisa">
+            <p>
+              <strong>Certify Letter for Business Visa Application</strong>
+              <br>(Letter certify current employment, business title, joining date and salary) </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+<app-footer-certifield></app-footer-certifield>
