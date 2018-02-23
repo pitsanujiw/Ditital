@@ -27,6 +27,7 @@ export class CertifyService {
         'note': note
       }
     };
+    console.log(body);
     return this.http.post(`${this.url}/employmentCertifyLetter/add`, body)
       .map(e => e.json());
   }

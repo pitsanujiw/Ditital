@@ -1,6 +1,8 @@
-<br>
+
 <form [formGroup]="myForm" (ngSubmit)="submit()">
-<div class="container"><p>EMPLOYEE ID </p><input class="form-control" type="text" name="" id="" required="required" formControlName="employeeID"/></div>
+<div class="container">
+  <p>EMPLOYEE ID </p>
+  <input class="form-control" type="text" name="" id="" required="required" formControlName="employeeID"/></div>
 <br>
 <div class="container">
  <table class="table">
@@ -44,10 +46,10 @@
  </div>
  <br>
  <div class="container">
-    <strong>Note :</strong>
-    <textarea class="textarea" placeholder="ETC ..." formControlName="note" ></textarea>
+    <label for="exampleFormControlTextarea1"><strong>Note</strong> </label>
+        <textarea class="form-control" placeholder="ETC ..."  id="exampleFormControlTextarea1" rows="5" formControlName="note" ></textarea>
     <br>
-    <button type="submit" onclick="window.location.reload()" >Submit</button>
+    <button type="submit" >Submit</button>
   </div> 
 </div>
 </form>

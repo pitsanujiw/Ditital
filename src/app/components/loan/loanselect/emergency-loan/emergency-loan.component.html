@@ -1,60 +1,71 @@
 <div class="container">
-    <div class="field">
-      <div class="field-label is-small">
-      </div>
-     <div class="field-body">
-       <div class="field -left">
-        Given Name : <input type="text" name="" id=""> &nbsp;&nbsp;      Family Name : <input type="text" name="" id=""> 
-       </div>
-     </div>
+  <div class="form-row">
+    <div class="col">
+      Given Name
+      <input type="text" class="form-control" placeholder="First name">
     </div>
+    <div class="col">
+      Family Name
+      <input type="text" class="form-control" placeholder="Last name">
     </div>
-ิ<br>
-<div class="container">
-<div class="control">
-    Employee ID : <input class="" type="text" placeholder="ID"> &nbsp;&nbsp;   National ID Number : <input class="" type="text" >
   </div>
-  <br>
+  <div class="form-row">
+    <div class="col">
+      Employee ID
+      <input type="text" class="form-control" placeholder="Employee ID">
+    </div>
+    <div class="col">
+      National ID Number
+      <input type="text" class="form-control" placeholder="National ID Number">
+    </div>
+  </div>
   <div class="control">
-  Mailing Address ( in Thai Language ) : <input class="input" type="text" placeholder="Passport number">
-</div>
-<br>
-<div class="control">
-    Request Amount (THB) : <input class="" type="text" placeholder="THB" value=0>   
-   </div><br>
-   <strong>Reason for loan request</strong> <br>
-    <textarea class="textarea" placeholder=""></textarea><br>
+    Mailing Address ( in Thai Language )
+    <input class="form-control" type="text" placeholder="Passport number">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity"> Request Amount (THB)</label>
+      <input type="text" class="form-control" placeholder=" Request Amount (THB)" value="0">
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Reason for loan request</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+      </div>
     <strong>Supporting document</strong>
     <br>
-    
-    <form action="" method="POST" enctype = "multipart/form-data">
-      <strong>document 1</strong>  
-      Doctor Certificate *Required  :
-      <input type="file" name="Datafile_"  accept="image/*" multiple>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <strong>document 1</strong>
+      Doctor Certificate *Required :
+      <input type="file" name="Datafile_" accept="image/*" multiple>
     </form>
-    <form action="" method="POST" enctype = "multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data">
       <strong>document 2</strong>
-      Medical Expense Receipt *Required  :
-      <input type="file" name="Datafile_"  accept="image/*" multiple>
+      Medical Expense Receipt *Required :
+      <input type="file" name="Datafile_" accept="image/*" multiple>
     </form>
-    <form action="" method="POST" enctype = "multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data">
       <strong>document 3</strong>
       <select>
         <option value="">Doctor Certificate</option>
         <option>Medical Expense Receipt</option>
         <option>Other , Please specify</option>
-      </select>  
-      <input type="file" name="Datafile_"  accept="image/*" multiple>
+      </select>
+      <input type="file" name="Datafile_" accept="image/*" multiple>
     </form>
     <br>
 
     <div class="container">
-        <strong>*Remark</strong> <br>
-        For more detail about Thomson Reuters loan policy, please visit   <a href="http://">HR Website</a>     <br>
-        Please contact <a href="mailto:GrpBkkHRServices@thomsonreuters.com">GrpBkkHRServices@thomsonreuters.com</a> if you have questions <br>    
+      <strong>*Remark</strong>
+      <br> For more detail about Thomson Reuters loan policy,<br> please visit
+      <a href="http://">HR Website</a>
+      <br> Please contact
+      <a href="mailto:GrpBkkHRServices@thomsonreuters.com">GrpBkkHRServices@thomsonreuters.com</a> if you have questions
+      <br>
     </div>
     <div class="container">
-        <br>
-        <button type="submit">Submit</button>
-      </div> 
+      <br>
+      <button type="submit">Submit</button>
+    </div>
   </div>
