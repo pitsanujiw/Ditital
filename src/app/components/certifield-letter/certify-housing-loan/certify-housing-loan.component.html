@@ -1,0 +1,96 @@
+<form [formGroup]="myForm" (ngSubmit)="submit(myForm.value)">
+  <div class="container">
+    <label>
+      <strong>
+        <h3>Certify Letter for Housing Loan</h3>
+      </strong>
+      <br>
+      <label>
+        <p> Employee ID &nbsp;</p>
+      </label>
+      <span class="">
+        <input id="float-input" formControlName="employeeID" type="text" size="50" required="required" pTooltip="Enter your Employee ID"  placeholder="Employee ID"
+          style="margin-left:.5em" tooltipPosition="bottom" pInputText>
+          <div class="ui-message ui-messages-error ui-corner-all" *ngIf="!myForm.controls['employeeID'].valid&&myForm.controls['employeeID'].dirty">
+              <i class="fa fa-close"></i>
+              Employee ID is required
+            </div>
+      </span>
+    </label>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Bank
+          </th>
+          <th>
+            Number of Copy
+          </th>
+        </tr>
+      </thead>
+
+      <tr>
+        <td>
+          Bangkok Bank Public Company Limited (BBL)
+        </td>
+        <td>
+          <div class="ui-g" style="width:250px;margin-bottom:10px">
+            <div class="ui-g-12">
+              <p-checkbox name="group1" binary="true" formControlName="BBL"></p-checkbox>
+            </div>
+          </div>
+      </tr>
+      <tr>
+        <td>
+          Land & House Bank (LH Bank)
+        </td>
+        <td>
+          <div class="ui-g" style="width:250px;margin-bottom:10px">
+            <div class="ui-g-12">
+              <p-checkbox name="group1" binary="true" formControlName="GHB"></p-checkbox>
+            </div>
+          </div>
+      </tr>
+      <tr>
+        <td>
+          Government Housing Bank (GHB)
+        </td>
+        <td>
+          <div class="ui-g" style="width:250px;margin-bottom:10px">
+            <div class="ui-g-12">
+              <p-checkbox name="group1" binary="true" formControlName="LHBank"></p-checkbox>
+            </div>
+          </div>
+      </tr>
+      <tr>
+        <td>
+          United Overseas Bank (Thai) Public Company Limited (UOB)
+        </td>
+        <td>
+          <div class="ui-g" style="width:250px;margin-bottom:10px">
+            <div class="ui-g-12">
+              <p-checkbox name="group1" binary="true" formControlName="UOB"></p-checkbox>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <div class="container">
+      *Note: This letter is for requesting housing loan under Thomson Reuters housing loan agreement with contracted banks.
+    </div>
+    <br>
+    <div class="container">
+      <label for="exampleFormControlTextarea1">
+        <strong>Note</strong>
+      </label>
+      <textarea class="form-control" placeholder="ETC ..." id="exampleFormControlTextarea1" rows="5" formControlName="note"></textarea>
+      <br>
+      <button pButton type="submit" label="Submit" [disabled]="!myForm.valid"></button>
+    </div>
+  </div>
+</form>
+
+<!-- <div class="ui-g" style="width:250px;margin-bottom:10px">
+    <div class="ui-g-12"><p-checkbox name="group1" value=1 label="UOB"  formControlName="UOB" inputId="ny"></p-checkbox></div>
+</div> -->

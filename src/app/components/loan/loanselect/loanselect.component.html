@@ -1,0 +1,31 @@
+<div class="jumbotron hero-body thomson">
+    <div class="container">
+      <img src="../../../../assets/logo.png">
+    </div>
+  </div>
+  <br>
+  <div class="container is-fullwidth">
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Please Select Loan option choice
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" routerLink="carloan">
+          <p>
+            <strong>Car loan</strong>
+        </a>
+        <a class="dropdown-item" routerLink="emergency">
+          <p>
+            <strong> Emergency Loan </strong>
+          </p>
+        </a>
+        <a class="dropdown-item" routerLink="parentalmedical">
+          <p>
+            <strong> Parental Medical Care Loan </strong>
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <router-outlet></router-outlet>

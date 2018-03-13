@@ -1,0 +1,36 @@
+/* Header */
+.bg-tr {
+	background-color: rgb(77, 77, 77) !important;
+  }
+  
+  a.bg-dark:hover, a.bg-dark:focus,
+  button.bg-dark:hover,
+  button.bg-dark:focus {
+	background-color: rgb(77, 77, 77), 11%, 13% !important;
+  }
+  .site-header {
+	background-color: rgba(77,77, 77);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-header a {
+	color: rgb(184, 184, 184);
+	transition: ease-in-out color .15s;
+  }
+  .site-header a:hover {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+  }
+  .site-headerTR {
+	background-color: rgb(255, 128, 0);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-headerTR a {
+	color: #999;
+	transition: ease-in-out color .15s;
+  }
+  .site-headerTR a:hover {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+  }

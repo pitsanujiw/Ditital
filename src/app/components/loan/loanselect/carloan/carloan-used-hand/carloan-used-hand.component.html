@@ -1,0 +1,20 @@
+<h5> Supporting document</h5>
+<label ><strong>Used Car</strong></label>
+  <br>
+  <div class="form-group">
+    <label>Car purchase agreement</label>
+    <input type="file" class="form-control" id="" accept="image/*" multiple="multiple" required="required" (change)="FileuploadCarPurchase($event)">
+  </div>
+  <div class="form-group">
+    <label>Car registration certificate (under previous owner's name)</label>
+    <input type="file" class="form-control" id="" accept="image/*" multiple="multiple" required="required" (change)="FileuploadCarReg($event)">
+  </div>
+  <div class="form-group">
+      <label>National ID card of the previous owner</label>
+      <input type="file" class="form-control" id="" accept="image/*" multiple="multiple" required="required" (change)="FileuploadNationalID($event)">
+    </div>
+    <div class="form-group">
+        <label>Other document, please specify</label>
+        <input type="file" class="form-control" id="" accept="image/*" multiple="multiple" required="required" (change)="FileuploadOther($event)">
+      </div>
+      

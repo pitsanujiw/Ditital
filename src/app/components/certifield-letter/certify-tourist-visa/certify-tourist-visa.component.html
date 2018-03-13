@@ -1,0 +1,78 @@
+<form [formGroup]="myForm" (ngSubmit)="submit(myForm.value)" enctype="multipart/form-data">
+  <div class="container">
+    <label>
+      <strong>
+        <h3>Employee certify tourist visa</h3>
+      </strong>
+    </label>
+    <div class="field">
+      <label>Employee ID</label>
+      <span class="">
+        <input id="float-input" formControlName="employeeID" type="text" size="30" required="required" pTooltip="Enter your Employee ID"
+          placeholder="Employee ID" style="margin-left:.5em" tooltipPosition="bottom" pInputText>
+        <div class="ui-message ui-messages-error ui-corner-all" *ngIf="!myForm.controls['employeeID'].valid&&myForm.controls['employeeID'].dirty">
+          <i class="fa fa-close"></i>
+          Employee ID is required
+        </div>
+        &nbsp; Number of copy &nbsp;
+        <p-spinner size="1" formControlName="numberOfCopy" [min]="0" [max]="10"></p-spinner>
+      </span>
+    </div>
+    <br>
+    <div class="control">
+
+      Full name as it appears in your passport : &nbsp;
+      <input id="float-input" formControlName="firstNamePassport" placeholder="Full name" type="text" size="60" required="required"
+        pTooltip="Enter your Fullname Passport" style="margin-left:.5em" tooltipPosition="bottom" pInputText>
+      <div class="ui-message ui-messages-error ui-corner-all" *ngIf="!myForm.controls['firstNamePassport'].valid&&myForm.controls['firstNamePassport'].dirty">
+        <i class="fa fa-close"></i>
+        Full name passport is required
+      </div>
+    </div>
+    <br>
+    <div class="control">
+      Passport Number : &nbsp;
+      <input id="float-input" placeholder="Passport number" formControlName="passportNumber" placeholder="Passport Number" type="text"
+        required="required" pTooltip="Enter your Passport Number" style="margin-left:.5em" tooltipPosition="bottom" size="30"
+        pInputText>
+      <div class="ui-message ui-messages-error ui-corner-all" *ngIf="!myForm.controls['passportNumber'].valid&&myForm.controls['passportNumber'].dirty">
+        <i class="fa fa-close"></i>
+        passport Number is required
+      </div>
+      &nbsp; Passport Expiry Date &nbsp;
+      <p-calendar formControlName="passportExpiryDate" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" placeholder="Please select Passport Expiry Date"
+        dateFormat="yy-mm-dd"></p-calendar>
+    </div>
+    <br>
+    <label> Please upload a photo of your passport (1st page) </label>
+    <br>
+    <p-fileUpload multiple="true" mode="basic" accept="image/*" maxFileSize="1000000" (change)="onFileChange($event);"></p-fileUpload>
+    <br>
+    <div class="control">
+      Embassy for Visa Application :
+      <p-dropdown formControlName="embassyForVisaApplication" [options]="EmbassyforVisa" optionLabel="name" [style]="{'width':'30%'}"
+        editable="true" filter="true" placeholder="Select a Embassy for visa"></p-dropdown>
+      &nbsp; Country of Visit :
+      <p-dropdown formControlName="countryOfVisit" [options]="CountryOfVisitDBs" optionLabel="name" [style]="{'width':'20%'}" filter="true"
+        editable="true" placeholder="Select a Country"></p-dropdown>
+      &nbsp;
+      <p-checkbox name="groupname" formControlName="schengen" binary="true"></p-checkbox>
+      &nbsp; Schengen Countries
+    </div>
+    <br>
+    <div class="control">
+      Period of visit : From : &nbsp;
+      <p-calendar formControlName="from" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030"
+        placeholder="Please select Period of visit from" dateFormat="yy-mm-dd"></p-calendar>
+      &nbsp; To : &nbsp;
+      <p-calendar formControlName="to" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" dateFormat="yy-mm-dd"
+        placeholder="Please select Period of visit to"></p-calendar>
+    </div>
+    <label for="exampleFormControlTextarea1">
+      <strong>Note</strong>
+    </label>
+    <textarea class="form-control" placeholder="" id="exampleFormControlTextarea1" rows="8" formControlName="note"></textarea>
+    <br>
+    <button pButton type="submit" label="Submit" [disabled]="!myForm.valid"></button>
+  </div>
+</form>

@@ -1,0 +1,33 @@
+<form [formGroup]="myForm" (ngSubmit)="submit(myForm.value)">
+  <div class="container">
+    <label>
+      <strong>
+        <h3>Employee certify letter</h3>
+      </strong>
+    </label>
+    <div class="field">
+      <label>Employee ID &nbsp;</label>
+      <input id="float-input" formControlName="employeeID" type="text" size="50" required="required" pTooltip="Enter your Employee ID"  placeholder="Employee ID"
+        style="margin-left:.5em" tooltipPosition="bottom" pInputText>
+      <div class="ui-message ui-messages-error ui-corner-all" *ngIf="!myForm.controls['employeeID'].valid&&myForm.controls['employeeID'].dirty">
+        <i class="fa fa-close"></i>
+        Employee ID is required
+      </div>
+      <br>
+      <br>
+      <div class="">
+        <span>
+          <label for="numberofcopy"> Number of copy &nbsp;</label>
+          <p-spinner size="5" formControlName="numberOfCopy" [min]="0" [max]="10"></p-spinner>
+        </span>
+      </div>
+      <label>
+        <strong>Note</strong>
+      </label>
+      <br>
+      <textarea [rows]="7" [cols]="100" pInputTextarea autoResize="autoResize" formControlName="note"></textarea>
+      <br>
+      <button pButton type="submit" label="Submit" [disabled]="!myForm.valid"></button>
+    </div>
+  </div>
+</form>

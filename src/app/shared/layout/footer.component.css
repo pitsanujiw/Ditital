@@ -1,0 +1,9 @@
+.bg-trFooter {
+	background-color: rgb(77, 77, 77) !important;
+  }
+
+  a.bg-trFooter:hover, a.bg-trFooter:focus,
+  button.bg-trFooter:hover,
+  button.bg-trFooter:focus {
+    background-color: rgb(77, 77, 77) !important;
+  }

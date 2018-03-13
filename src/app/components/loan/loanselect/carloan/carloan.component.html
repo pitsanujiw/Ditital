@@ -1,0 +1,103 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()" enctype="multipart/form-data">
+<div class="container">
+  <div class="form-row">
+    <div class="col">
+      Given Name
+      <input formControlName="GivenName" type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      Family Name
+      <input formControlName="FamilyName" type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      Employee ID
+      <input formControlName="employeeID" type="text" class="form-control" placeholder="Employee ID">
+    </div>
+    <div class="col">
+      National ID Number
+      <input formControlName="NationalID" type="text" class="form-control" placeholder="National ID Number">
+    </div>
+  </div>
+  <div class="control">
+    Mailing Address ( in Thai Language )
+    <input formControlName="mailAddress" class="form-control" type="text" placeholder="Passport number">
+  </div>
+  <div class="form-row">
+      <div class="col">
+          Request Amount (THB)
+        <input formControlName="RequestAmount" type="text" class="form-control" placeholder="Request Amount (THB)">
+      </div>
+      <div class="col">
+          Type of car
+        <select formControlName="typeOfCar" class="form-control" [selectedIndex]="1" (change)="selecttypeCar($event.target.selectedIndex)">
+            <option value="First Hand Car" > First Hand Car </option>
+            <option  value="Used Car" >Used Car</option>
+          </select>
+      </div>
+    </div>
+    <br> 
+    <div class="typesCar">
+      <app-carloan-first-hand *ngIf="typesCar===1"></app-carloan-first-hand>
+      <app-carloan-used-hand *ngIf="typesCar===2"></app-carloan-used-hand>
+    
+  </div>
+    <!-- <div class="form-group col-md-6">
+    <div class="btn-group">
+      Type of car   &nbsp; 
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Type of car
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="">
+              First Hand Car
+            </a>
+            <a class="dropdown-item" routerLink="">
+              Used Hand
+            </a>
+        </div>
+      </div>
+      </div>   -->
+  <!-- <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity"> Request Amount (THB)</label>
+      <input formControlName="RequestAmount" type="text" class="form-control" placeholder=" Request Amount (THB)" value="0">
+    </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Type of car</label>
+        <select formControlName="typeOfCar" id="inputState" class="form-control">
+          <option selected>First Hand Car</option>
+          <option>Used Car</option>
+        </select>
+      </div>
+    </div> -->
+  <!-- <h5> Supporting document</h5>
+  <strong>First Hand Car</strong>
+  <br>
+  <div class="form-group">
+    <label for="">* Pre-Emption certificate</label>
+    <input type="file" class="form-control-file" id="" accept="image/*" multiple="multiple" required="required" (change)="FileuploadPreEmptioncertificate($event)">
+  </div>
+  <div class="form-group">
+    <label for=""> * Other Docunebt , Please describe</label>
+    <input type="file" class="form-control-file" id="" accept="image/*" multiple="multiple" required="required" (change)="FileuploadOtherDocument($event)">
+  </div> -->
+  <strong> *Remark </strong> 
+  <br>
+  The car must be registered under your name.
+  <br> All documents must be signed to certify true copy.
+  <br> If you can only provide a receipt from the vendor to confirm that you have made a deposit to purchase a car when you submit
+  the loan request,
+  <br> you must provide a copy of the car registration to HR soonest after you have received the document. Otherwise the company
+  may consider that
+  <br> the request is incomplete and may cancel the loan
+  <br> For more detail about Thomson Reuters loan policy, please visit
+  <a href="http://">HR Website</a>
+  <br> Please contact
+  <a href="mailto:GrpBkkHRServices@thomsonreuters.com"> GrpBkkHRServices@thomsonreuters.com </a>if you have questions.
+  <br>
+  <br>
+  <button type="submit">Submit</button>
+</div>
+</form>

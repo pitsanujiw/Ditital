@@ -1,0 +1,114 @@
+    <form [formGroup]="myForm" (ngSubmit)="submit()" enctype="multipart/form-data">
+      <div class="container">
+        <div class="form-row">
+          <div class="col">
+            Given Name
+            <input formControlName="GivenName" type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            Family Name
+            <input formControlName="FamilyName" type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            Employee ID
+            <input formControlName="employeeID" type="text" class="form-control" placeholder="Employee ID">
+          </div>
+          <div class="col">
+            National ID Number
+            <input formControlName="NationalID" type="text" class="form-control" placeholder="National ID Number">
+          </div>
+        </div>
+        <div class="control">
+          Mailing Address ( in Thai Language )
+          <input formControlName="MailAdress" class="form-control" type="text" placeholder="Passport number">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity"> Request Amount (THB)</label>
+            <input formControlName="RequestAmount" type="text" class="form-control" placeholder=" Request Amount (THB)" value="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Reason for loan request</label>
+          <textarea formControlName="ReasonForLoanRequest" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+        </div>
+        <label><strong>Supporting document</strong></label>
+        <strong>document 1</strong>
+        Doctor Certificate *Required :
+        <input class="form-control" type="file" name="Datafile_" accept="image/*" multiple="multiple">
+        <strong>document 2</strong>
+        Medical Expense Receipt *Required :
+        <input class="form-control" type="file" name="Datafile_" accept="image/*" multiple="multiple">
+        <br>
+        <div>
+          <div>
+            <!--  -->
+            <!-- <div formArrayName="addresses">
+              <div *ngFor="let addresses of myForms.controls.addresses.controls">
+                <label>
+                  <select class="form-control">
+                      <option value="">Doctor Certificate</option>
+                      <option>Medical Expense Receipt</option>
+                      <option>Other , Please specify</option>
+                    </select> 
+                  </label> 
+              <strong>document </strong>
+              Medical Expense Receipt *Required :
+              <input class="form-control" type="file" name="Datafile_" accept="image/*" multiple="multiple">
+            </div>
+            <br>
+            <div class="margin-20">
+                <a (click)="addfieldupload()" style="cursor: default">
+                  <label>Add another address +</label>
+                </a>
+              </div>
+            </div> -->
+            <!--  -->
+            <!-- test add dyamic -->
+            <!-- <div formArrayName="addresses">
+              <div *ngFor="let address of myForms.controls.addresses.controls; let i=index" class="panel panel-default">
+                <div class="panel-heading">
+                  <span>Address {{i + 1}}</span>
+                </div>
+                <div class="panel-body" [formGroupName]="i">
+                  <div class="form-group col-xs-6">
+                    <label>street</label>
+                    <input type="text" class="form-control" formControlName="street">
+                    <small [hidden]="myForms.controls.addresses.controls[i].controls.street.valid" class="text-danger">
+                      Street is required
+                    </small>
+                  </div>
+                  <div class="form-group col-xs-6">
+                    <label>postcode</label>
+                    <input type="text" class="form-control" formControlName="postcode">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="margin-20">
+              <a (click)="addAddress()" style="cursor: default">
+                Add another address +
+              </a>
+            </div> -->
+            <!--  -->
+            <br>
+            <br>
+            <br>
+            <strong>*Remark</strong>
+            <br> For more detail about Thomson Reuters loan policy,
+            <br> please visit
+            <a href="http://">HR Website</a>
+            <br> Please contact
+            <a href="mailto:GrpBkkHRServices@thomsonreuters.com">GrpBkkHRServices@thomsonreuters.com</a> if you have questions
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    
+    </form>
+
